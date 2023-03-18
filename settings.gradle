@@ -1,0 +1,19 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+
+        // Introduce the ArcGIS Runtime SDK for Android Maven repository
+        maven {url 'https://esri.jfrog.io/artifactory/arcgis'}
+    }
+}
+rootProject.name = "LSGI541 - Lab Collection"
+include ':app'

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GoogleMapsRouteQuery">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_googleMapsRouteQuery_queryParams"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/textview_googleMapsRouteQuery_from"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:gravity="right"
+            android:text="From: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_googleMapsRouteQuery_to"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="right"
+            android:text="To: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_googleMapsRouteQuery_from" />
+
+        <TextView
+            android:id="@+id/textview_googleMapsRouteQuery_language"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="right"
+            android:text="Language: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_googleMapsRouteQuery_to" />
+
+        <EditText
+            android:id="@+id/edittext_googleMapsRouteQuery_from"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Where are you coming from?"
+            android:inputType="textPostalAddress"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textview_googleMapsRouteQuery_from"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edittext_googleMapsRouteQuery_to"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:hint="Where would you like to go now?"
+            android:inputType="textPostalAddress"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textview_googleMapsRouteQuery_to"
+            app:layout_constraintTop_toBottomOf="@id/edittext_googleMapsRouteQuery_from" />
+
+        <Spinner
+            android:id="@+id/spinner_googleMapsRouteQuery_language"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:entries="@array/googleMapsRouteQuery_languageChoices"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textview_googleMapsRouteQuery_language"
+            app:layout_constraintTop_toBottomOf="@id/edittext_googleMapsRouteQuery_to" />
+
+        <Button
+            android:id="@+id/button_googleMapsRouteQuery_doQuery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Find route for me!"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_googleMapsRouteQuery_language" />
+
+        <ProgressBar
+            android:id="@+id/progressbar_googleMapsRouteQuery"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/button_googleMapsRouteQuery_doQuery"
+            app:layout_constraintEnd_toStartOf="@+id/button_googleMapsRouteQuery_doQuery"
+            app:layout_constraintTop_toTopOf="@id/button_googleMapsRouteQuery_doQuery" />
+
+        <TextView
+            android:id="@+id/textview_googleMapsRouteQuery_queryStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="right|center_vertical"
+            android:text=" "
+            app:layout_constraintBottom_toBottomOf="@+id/button_googleMapsRouteQuery_doQuery"
+            app:layout_constraintEnd_toStartOf="@+id/button_googleMapsRouteQuery_doQuery"
+            app:layout_constraintTop_toTopOf="@id/button_googleMapsRouteQuery_doQuery" />
+
+        <Switch
+            android:id="@+id/switch_googleMapsRouteQuery_showDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show details"
+            app:layout_constraintEnd_toEndOf="@id/button_googleMapsRouteQuery_doQuery"
+            app:layout_constraintTop_toBottomOf="@+id/button_googleMapsRouteQuery_doQuery" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapview_googleMapsRouteQuery"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_googleMapsRouteQuery_routeDetails" />
+
+    <Button
+        android:id="@+id/button_backToMain_googleMapsRouteQuery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/buttonText_backToMain"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/textview_googleMapsRouteQuery_routeDetails"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_googleMapsRouteQuery_queryParams" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

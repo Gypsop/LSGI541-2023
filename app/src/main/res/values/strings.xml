@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">LSGI541 - Lab Collection</string>
+
+    <!-- ArcGIS -->
+    <string name="arcgis_allinone_api_key">AAP****</string>
+    <string name="confirmedCasesInTheGreatBayArea_featureLayer_id">22a****</string>
+    <string name="confirmedCasesInTheGreatBayArea_featureLayer_url">https://services7.arcgis.com/JDA****/arcgis/rest/services/Confirmed_Cases_in_the_Great_Bay_Area/FeatureServer/0</string>
+    <string name="mangkhutPath_styledFeatureLayer_id">d88****</string>
+    <string name="mangkhutPath_styledFeatureLayer_url">https://services7.arcgis.com/JDA****/arcgis/rest/services/Mangkhut_Path/FeatureServer/0</string>
+
+    <!-- Google Maps -->
+    <string name="google_maps_key">AIz****</string>
+    <string name="google_maps_queryUrl_section1">https://maps.googleapis.com/maps/api/directions/json?origin=</string>
+    <string name="google_maps_queryUrl_section2">&amp;destination=</string>
+    <string name="google_maps_queryUrl_section3">&amp;key=</string>
+    <string name="google_maps_queryUrl_section4">&amp;language=</string>
+
+    <!-- Button Text -->
+    <string name="buttonText_toConfirmedCasesInTheGreatBayArea">Confirmed Cases\nin the Great Bay Area</string>
+    <string name="buttonText_toMangkhutPath">Mangkhut Path</string>
+    <string name="buttonText_toGoogleMapsRouteQuery">Google Maps Route Query</string>
+    <string name="buttonText_backToMain">Back to Main</string>
+
+    <!-- TextView Text -->
+    <string name="textviewText_copyright">© 2022 Xiaosheng ZHU, Esri and Google\nFor subject LSGI541 in PolyU\n\nxiaosheng.zhu@connect.polyu.hk</string>
+    <string name="textviewText_googleMapsRouteQuery_queryStatus_ready">Input locations and press the button.</string>
+    <string name="textviewText_googleMapsRouteQuery_queryStatus_emptyInputWarning">Input locations first.</string>
+    <string name="textviewText_googleMapsRouteQuery_queryStatus_finished">Finished.</string>
+
+
+</resources>
