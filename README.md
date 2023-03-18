@@ -9,8 +9,3 @@ For the tutorial notes, see [here](https://xiaoshengzhu.notion.site/Lab-Tutorial
 - [Java codes](https://github.com/Gypsop/LSGI541-2023/tree/main/app/src/main/java/com/lsgi541/lab/collection)
 - [XML layouts](https://github.com/Gypsop/LSGI541-2023/tree/main/app/src/main/res/layout)
 - [Value definitions](https://github.com/Gypsop/LSGI541-2023/tree/main/app/src/main/res/values)
-
-## Screenshots
-<center class="half">
-    <img src="./screenshots/ConfirmedCasesInTheGreatBayArea.png" width="250"/> <img src="./screenshots/MangkhutPath.png" width="250"/> <img src="./screenshots/GoogleMapsRouteQuery.png" width="250"/>
-</center>
